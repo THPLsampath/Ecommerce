@@ -1,3 +1,3 @@
 export default {
-    MONGODB_URL: ProcessingInstruction.env.MONGODB_URL || 'mongodb://localhost/amazona'
+    MONGODB_URL: process.env.MONGODB_URL || 'mongodb://localhost/amazona'
 }
