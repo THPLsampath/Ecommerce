@@ -3,6 +3,7 @@ import data from './data';
 import config from './config';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 
 dotenv.config();
@@ -22,6 +23,7 @@ if (connection) {
 
 
 const app = express();
+app.use(bodyParser.json());
 
 app.use("/api/users", userRoute);
 
