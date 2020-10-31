@@ -14,7 +14,7 @@ function HomeScreen(props) {
             // 
         }
     }, [])
-    // console.log(product);
+    // console.log(product); 
     if (!products) {
         return <div><h1>loading...</h1></div>
     } else {

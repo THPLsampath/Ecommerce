@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signin } from '../action/useraction';
 
+import { set } from '../animationStyle/login';
+
 
 function SigninScreen(props) {
     const [email, setEmail] = useState('');
@@ -25,6 +27,8 @@ function SigninScreen(props) {
         dispatch(signin(email, password));
     };
 
+
+
     return (
         <div className="from">
             <form onSubmit={handleSubmit}>
@@ -32,8 +36,14 @@ function SigninScreen(props) {
                     <li>
                         <h2>Sign-in</h2>
                     </li>
-                    <li> 
-                        {loading && <div>Loading...</div>}
+                    <li>
+                        {loading &&
+                            <div>
+                                <div style={set.set1}></div>
+                                <div style={set.set2}></div>
+                                <div style={set.set3}></div>
+                                <div style={set.set4}></div>
+                            </div>}
                         {error && <div>{error}</div>}
                     </li>
                     <li>
